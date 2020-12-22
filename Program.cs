@@ -6,6 +6,8 @@ namespace _4Guesses
     {
         static void Main(string[] args)
         {
+            var random = new Random();
+            var answer = random.Next(1, 11);
             
         }
     }
