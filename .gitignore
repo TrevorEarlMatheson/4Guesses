@@ -1,0 +1,13 @@
+4Guesses.csproj
+.vscode/launch.json
+.vscode/tasks.json
+obj/4Guesses.csproj.nuget.dgspec.json
+obj/4Guesses.csproj.nuget.g.props
+obj/4Guesses.csproj.nuget.g.targets
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+obj/Debug/netcoreapp3.1/4Guesses.AssemblyInfo.cs
+obj/Debug/netcoreapp3.1/4Guesses.AssemblyInfoInputs.cache
+obj/Debug/netcoreapp3.1/4Guesses.assets.cache
+obj/Debug/netcoreapp3.1/4Guesses.csprojAssemblyReference.cache
