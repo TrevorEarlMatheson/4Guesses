@@ -7,19 +7,27 @@ namespace _4Guesses
         static string Guess(int answer, int guesses)
         {
             Console.WriteLine("I am thinking of a number between 1 and 10 try to guess it!");
-            var currentGuess = int.Parse(Console.ReadLine());
-            if(currentGuess == answer)
+            try
             {
-                return("You win!");
+                var currentGuess = int.Parse(Console.ReadLine());
+                if(currentGuess == answer)
+                {
+                    return("You win!");
+                }
+                else if(currentGuess != answer && guesses < 3)
+                {
+                    Console.WriteLine("That is wrong I am not thinking of {0}. Try again!", currentGuess);
+                    return(Guess(answer,++guesses));
+                }
+                else
+                {
+                    return("You Lose!");
+                }
             }
-            else if(currentGuess != answer && guesses < 3)
+            catch(FormatException) //If the user enters anything other than a number prompt them to try again.
             {
-                Console.WriteLine("That is wrong I am not thinking of {0}. Try again!", currentGuess);
-                return(Guess(answer,++guesses));
-            }
-            else
-            {
-                return("You Lose!");
+                Console.WriteLine("This is not a valid entry, please try again.");
+                return(Guess(answer,guesses));
             }
         }
         static void Main(string[] args)
